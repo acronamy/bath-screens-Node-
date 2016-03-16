@@ -1,0 +1,11 @@
+{
+	"active_theme":"blue",
+	"tasks":"./tasks",
+	"src":{
+		"styles":"./themes/blue/styles",
+		"scripts":"./themes/blue/scripts",
+		"templates":"./themes/blue/templates",
+		"images":"./themes/blue/images"
+	},
+	"dest":"./public"
+}

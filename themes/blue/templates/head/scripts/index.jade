@@ -1,0 +1,12 @@
+script(src='/socket.io/socket.io.js')
+
+-//sync the host and port with the conf object found in server index
+- var host = server.host
+- var port = server.frontend_port
+
+script.
+	window.socket = io.connect('http://#{host}:#{port}');
+
+-//include all scripts after socket io
+script(src='scripts/index.js')
+-//script(id='gapi' src='https://apis.google.com/js/client.js')
