@@ -4,21 +4,22 @@ var express = require('express'),
 		jade = require('jade'),
 		path = require('path'),
 		fs = require('fs'),
-		favicon = require('serve-favicon')
+		favicon = require('serve-favicon'),
+		conf = require('../configuration/conf.json')// include global settings
 
-var conf = {}
-conf.public = '../public'
-conf.engine = 'jade'
-conf.frontend_port = 8080
-conf.host = 'localhost'
+var useConf = {}
+useConf.public = '../public'
+useConf.engine = conf.templateEngine
+useConf.frontend_port = conf.port
+useConf.host = conf.localhost
 
 //favicon buggering requests so lets serve one
-app.use(favicon(path.resolve(__dirname,conf.public,'themes','favicon.gif')))
+app.use(favicon(path.resolve(__dirname,useConf.public,'themes','favicon.gif')))
 
 //set config
 var io = require('./conf.js')
-	.bind(conf)(app)
+	.bind(useConf)(app)
 
 //auto load routes
-require('./load_routes.js')(app,io,conf)
-require('./messages/greeting.js')(conf)
+require('./load_routes.js')(app,io,useConf)
+require('./messages/greeting.js')(useConf)

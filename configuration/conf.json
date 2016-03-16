@@ -1,0 +1,7 @@
+{
+	"localhost":"127.0.0.1",
+	"port":8080,
+	"parentSite":"http://www.screens.dev/",
+	"developer":false,
+	"templateEngine":"jade"
+}

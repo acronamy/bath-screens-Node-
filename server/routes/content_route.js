@@ -3,12 +3,8 @@ var http = require('http'),
 		path = require('path'),
 		url = require('url'),
 		os = require('os'),
-		rp = require('request-promise');
-
-var conf = {}
-conf.localhost = os.networkInterfaces().lo[0].address
-conf.developer = true
-conf.parentSite = 'http://www.screens.dev/'
+		rp = require('request-promise'),
+		conf = require('../../configuration/conf.json')
 
 function hyphanate(str){
 	return str.replace(/\_/g,'-')
