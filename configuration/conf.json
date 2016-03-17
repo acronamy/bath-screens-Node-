@@ -1,7 +1,7 @@
 {
-	"localhost":"127.0.0.1",
+	"localhost":"localhost",
 	"port":8080,
-	"parentSite":"http://www.screens.dev/",
+	"parentSite":"http://screeneditor/",
 	"developer":false,
 	"templateEngine":"jade"
 }

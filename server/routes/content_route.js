@@ -30,8 +30,8 @@ app.get('/settings',function(req,res){
 
 function init(){
 
-	app.get('/',qs)
-	app.get('/:audience',qs)
+	app.get('/app',qs)
+	app.get('/app:audience',qs)
 
 	function qs(req,res){
 		var q = url.parse(req.url,true).query,
