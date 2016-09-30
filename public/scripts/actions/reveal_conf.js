@@ -65,7 +65,7 @@ module.exports = function(reveal){
 		previewLinks: false,
 
 		// Transition style
-		transition: 'slide', // none/fade/slide/convex/concave/zoom
+		transition: 'default', // none/fade/slide/convex/concave/zoom
 
 		// Transition speed
 		transitionSpeed: 'default', // default/fast/slow

@@ -1,6 +1,7 @@
 var reveal = require('reveal.js'),
 		$ = require('jquery'),
-		moment = require('moment')
+		moment = require('moment'),
+		Observe = require('./actions/Object.observe.poly.js');
 
 
 //make if full screenish
